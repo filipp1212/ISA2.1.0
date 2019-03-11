@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ContosoUniversity1.Models
 {
-    public class Instructor
+    public class Instructor : Person
     {
         public int ID { get; set; }
 
