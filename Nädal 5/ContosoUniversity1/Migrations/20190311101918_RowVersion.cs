@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ContosoUniversity1.Migrations
 {
-    public partial class ComplexDataModel : Migration
+    public partial class RowVersion : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -47,7 +47,8 @@ namespace ContosoUniversity1.Migrations
                     Name = table.Column<string>(maxLength: 50, nullable: true),
                     Budget = table.Column<decimal>(type: "money", nullable: false),
                     StartDate = table.Column<DateTime>(nullable: false),
-                    InstructorID = table.Column<int>(nullable: true)
+                    InstructorID = table.Column<int>(nullable: true),
+                    RowVersion = table.Column<byte[]>(rowVersion: true, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -59,15 +60,6 @@ namespace ContosoUniversity1.Migrations
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
                 });
-            migrationBuilder.Sql("INSERT INTO dbo.Department (Name, Budget, StartDate) VALUES ('Temp', 0.00, GETDATE())");
-            // Default value for FK points to department created above, with
-            // defaultValue changed to 1 in following AddColumn statement.
-
-            migrationBuilder.AddColumn<int>(
-                name: "DepartmentID",
-                table: "Course",
-                nullable: false,
-                defaultValue: 1);
 
             migrationBuilder.CreateTable(
                 name: "OfficeAssignment",
