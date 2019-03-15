@@ -23,11 +23,17 @@ namespace Infra
 
         public DbSet<Employee> Employees { get; set; }
     }
-    //public class Employees
-    //{
-    //    public static List<Employee> Get(SalesDbContext db)
-    //    {
-    //        return db.Employees.ToList();
-    //    }
-    //}
+    public class Employees
+    {
+        public static List<Employee> Get()
+        {
+            var employees = new List<Employee>
+            {
+                new Employee("Jhon", "doe", 1400),
+                new Employee("Michael", "Jacksn", 1600),
+                new Employee("Robert", "Pattinson", 20000)
+            };
+            return employees;
+        }
+    }
 }

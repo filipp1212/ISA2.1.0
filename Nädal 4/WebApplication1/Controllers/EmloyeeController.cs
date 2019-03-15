@@ -10,12 +10,12 @@ using Infra;
 
 namespace Labor1.Controllers
 {
-    public class TestController : Controller
+    public class EmloyeeController : Controller
     {
         private readonly SalesDbContext db;
-        public TestController(SalesDbContext db) { this.db = db; }
+        public EmloyeeController(SalesDbContext db) { this.db = db; }
 
-        public ActionResult GetView()
+        public ActionResult Index()
         {
             var model = new EmployeeListViewModel();
             List<Employee> employees = Employees.Get(db);
@@ -27,8 +27,12 @@ namespace Labor1.Controllers
             }
 
             model.Employees = list;
-            model.UserName = "Admin";
-            return View("MyView", model);
+            return View("Index", model);
+        }
+
+        public ActionResult AddNew()
+        {
+            return View("CreateEmployee");
         }
     }
 }
