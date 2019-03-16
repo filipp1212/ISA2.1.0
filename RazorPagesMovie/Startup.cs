@@ -11,7 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using RazorPageMovies.Models;
-using ContosoUniversity1.Data;
+
 
 namespace RazorPagesMovie
 {
