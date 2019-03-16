@@ -3,7 +3,7 @@ using System.Linq;
 using RazorPagesMovie.Models;
 using RazorPagesMovie;
 
-namespace RazorPageMovie.Models
+namespace RazorPagesMovie.Models
 {
     public static class DbInitializer
     {

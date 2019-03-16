@@ -5,16 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using RazorPageMovies.Models;
 using RazorPagesMovie.Models;
 
-namespace RazorPageMovies.Pages.Student
+namespace RazorPagesMovie.Pages.Student
 {
     public class DetailsModel : PageModel
     {
-        private readonly RazorPageMovies.Models.Context _context;
+        private readonly RazorPagesMovie.Models.Context _context;
 
-        public DetailsModel(RazorPageMovies.Models.Context context)
+        public DetailsModel(RazorPagesMovie.Models.Context context)
         {
             _context = context;
         }
@@ -27,6 +26,12 @@ namespace RazorPageMovies.Pages.Student
             {
                 return NotFound();
             }
+
+            Student = await _context.Student
+                .Include(s => s.Enrollments)
+                .ThenInclude(e => e.Course)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.ID == id);
 
             Student = await _context.Student.FirstOrDefaultAsync(m => m.ID == id);
 

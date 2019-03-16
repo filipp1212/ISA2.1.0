@@ -35,9 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContosoUniversity1", "Näda
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "N6", "N6", "{641346FC-73E4-4329-BE7B-5299D8ED20A4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPageMovies", "RazorPagesMovie\RazorPageMovies.csproj", "{640862CC-DA22-4080-98D3-8FC672FE904B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesMovie", "RazorPagesMovie\RazorPagesMovie.csproj", "{640862CC-DA22-4080-98D3-8FC672FE904B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{29BA4372-1C48-4863-8FB7-E2A920DB947C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{29BA4372-1C48-4863-8FB7-E2A920DB947C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
