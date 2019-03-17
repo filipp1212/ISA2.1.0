@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using RazorPagesMovie.Models;
-using RazorPagesMovie.Models;
 
 namespace RazorPagesMovie.Pages.Student
 {
@@ -34,10 +33,19 @@ namespace RazorPagesMovie.Pages.Student
                 return Page();
             }
 
-            _context.Student.Add(Student);
-            await _context.SaveChangesAsync();
+            var emptyStudent = new Models.Student();
 
-            return RedirectToPage("./Index");
+            if (await TryUpdateModelAsync<Models.Student>(
+                emptyStudent,
+                "student",   // Prefix for form value.
+                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate))
+            {
+                _context.Student.Add(emptyStudent);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
+            }
+
+            return null;
         }
     }
 }

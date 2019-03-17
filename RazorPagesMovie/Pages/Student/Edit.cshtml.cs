@@ -30,7 +30,7 @@ namespace RazorPageMovies.Pages.Student
                 return NotFound();
             }
 
-            Student = await _context.Student.FirstOrDefaultAsync(m => m.ID == id);
+            Student = await _context.Student.FindAsync(id);
 
             if (Student == null)
             {
@@ -39,12 +39,14 @@ namespace RazorPageMovies.Pages.Student
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(int? id)
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
+
+            var studentToUpdate = await _context.Student.FindAsync(id);
 
             _context.Attach(Student).State = EntityState.Modified;
 
