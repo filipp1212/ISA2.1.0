@@ -6,10 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Models;
-using RazorPagesMovie.Models;
 
 
-namespace RazorPageMovies.Pages.Student
+namespace RazorPagesMovie.Pages.Student
 {
     public class DeleteModel : PageModel
     {
