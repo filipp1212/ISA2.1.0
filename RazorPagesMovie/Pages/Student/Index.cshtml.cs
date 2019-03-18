@@ -23,7 +23,7 @@ namespace RazorPagesMovie.Pages.Student
         public string CurrentFilter { get; set; }
         public string CurrentSort { get; set; }
 
-        public IList<RazorPagesMovie.Models.Student> Student { get;set; }
+        public PaginatedList<Models.Student> Student { get; set; }
 
 
         public async Task OnGetAsync(string sortOrder, string searchString)
@@ -58,7 +58,7 @@ namespace RazorPagesMovie.Pages.Student
                     break;
             }
 
-            Student = await studentIQ.AsNoTracking().ToListAsync();
+            Student = (PaginatedList<Models.Student>) await studentIQ.AsNoTracking().ToListAsync();
         }
     }
 }
