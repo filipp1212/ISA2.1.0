@@ -39,6 +39,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesMovie", "RazorPag
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{29BA4372-1C48-4863-8FB7-E2A920DB947C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "N6.1", "N6.1", "{BF33598E-68E8-4273-AAD3-B595EC012FED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoUniversity", "ContosoUniversity\ContosoUniversity.csproj", "{26BF7474-2D29-4DE7-B311-8E6DF14A7112}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +105,10 @@ Global
 		{29BA4372-1C48-4863-8FB7-E2A920DB947C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29BA4372-1C48-4863-8FB7-E2A920DB947C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29BA4372-1C48-4863-8FB7-E2A920DB947C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26BF7474-2D29-4DE7-B311-8E6DF14A7112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26BF7474-2D29-4DE7-B311-8E6DF14A7112}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26BF7474-2D29-4DE7-B311-8E6DF14A7112}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26BF7474-2D29-4DE7-B311-8E6DF14A7112}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -120,6 +128,7 @@ Global
 		{9D0BD2F8-C776-44D2-8E11-95FA01079CEB} = {46B260D3-C385-4B89-8807-5C3B1EAC5178}
 		{640862CC-DA22-4080-98D3-8FC672FE904B} = {641346FC-73E4-4329-BE7B-5299D8ED20A4}
 		{29BA4372-1C48-4863-8FB7-E2A920DB947C} = {077C0F68-70EA-4975-AD93-6FEAB1F30C81}
+		{26BF7474-2D29-4DE7-B311-8E6DF14A7112} = {BF33598E-68E8-4273-AAD3-B595EC012FED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E4A1B0F-A518-44BE-9FC7-C6DF1DFF9B11}
